@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-<img src="assets/alman-alpaca.png" alt="Cabrita" style="width: 20%; min-width: 300px; display: block; margin: auto;">
+<img src="assets/alman-alpaca2.png" alt="alpaca" style="width: 20%; min-width: 300px; display: block; margin: auto;">
 </p>
 
 # Alman Alpaca: A german finetuned instruction LLaMA (WIP)
