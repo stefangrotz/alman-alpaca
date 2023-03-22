@@ -11,7 +11,7 @@ def translate_text(value):
         model="gpt-3.5-turbo",
         messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": f"Translate the following text to Portuguese: '{value}'"},
+                {"role": "user", "content": f"Translate the following text to German: '{value}'"},
             ],
         max_tokens=1024,
         temperature=0,
