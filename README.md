@@ -5,6 +5,14 @@
 # Alman Alpaca: A german finetuned instruction LLaMA (WIP)
 Fork of the portugese https://github.com/22-hours/cabrita/blob/main/README.md
 
+Basic ideas:
+* Better test data creation using GPT-4 and adding more variation into the prompt than the original one
+* Extended training data, created from Wikidata, Wikihow,...
+*
+
+-----
+Original readme:
+
 This repository is intended to share all the steps and resources that we used to finetune our version of LLaMA.
 
 This model is designed for research use only, i.e., cannot be used for commercial purposes or entertainment.
