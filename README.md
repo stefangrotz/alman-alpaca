@@ -2,7 +2,8 @@
 <img src="assets/cabrita.png" alt="Cabrita" style="width: 20%; min-width: 300px; display: block; margin: auto;">
 </p>
 
-# Cabrita: A portuguese finetuned instruction LLaMA
+# Alman Alpaca: A german finetuned instruction LLaMA (WIP)
+Fork of the portugese https://github.com/22-hours/cabrita/blob/main/README.md
 
 This repository is intended to share all the steps and resources that we used to finetune our version of LLaMA.
 
