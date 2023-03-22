@@ -10,6 +10,10 @@ Basic ideas:
 * Extended training data, created from Wikidata, Wikihow,...
 *
 
+First steps:
+1. create basic training data with the tooling of the portugese team
+2. train first model
+
 -----
 Original readme:
 
