@@ -6,7 +6,7 @@
 Fork of the portugese https://github.com/22-hours/cabrita/blob/main/README.md
 
 Basic ideas:
-* Better test data creation using GPT-4 and adding more variation into the prompt than the original one
+* Better training data creation using GPT-4 and adding more variation into the prompt than the original one (for example looping through wikipedia categories to cover different areas of science)
 * Extended training data, created from Wikidata, Wikihow,...
 *
 
