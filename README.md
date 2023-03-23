@@ -3,7 +3,8 @@
 </p>
 
 # Alman Alpaca: A german finetuned instruction LLaMA (WIP)
-Fork of the portugese https://github.com/22-hours/cabrita/blob/main/README.md
+* Fork of the portugese https://github.com/22-hours/cabrita/blob/main/README.md
+* Another similar German project: https://github.com/Whadup/llamarr_alpaca/
 
 Basic ideas:
 * Better training data creation using GPT-4 and adding more variation into the prompt than the original one (for example looping through wikipedia categories to cover different areas of science)
