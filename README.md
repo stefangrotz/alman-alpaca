@@ -4,6 +4,7 @@
 
 # Alman Alpaca: A german finetuned instruction LLaMA (WIP)
 Fork of the portugese https://github.com/22-hours/cabrita/blob/main/README.md
+
 Another similar German project: https://github.com/Whadup/llamarr_alpaca/
 
 Basic ideas:
