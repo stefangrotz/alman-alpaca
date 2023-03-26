@@ -6,14 +6,17 @@
 * Fork of the portugese https://github.com/22-hours/cabrita/blob/main/README.md
 * Another similar German project: https://github.com/Whadup/llamarr_alpaca/
 
-Basic ideas:
-* Better training data creation using GPT-4 and adding more variation into the prompt than the original one (for example looping through wikipedia categories to cover different areas of science)
-* Extended training data, created from Wikidata, Wikihow,...
-*
-
-First steps:
+## First steps:
 1. create basic training data with the tooling of the portugese team
-2. train first model
+2. train first model with similar performance as cabrita
+
+## Afterwards:
+
+Improve model using different datasets:
+* Self-created datasets using Wikidata & GPT-4
+* Translating https://github.com/gururise/AlpacaDataCleaned
+* German Dataset from https://open-assistant.io (once it is available)
+
 
 -----
 Original readme:
