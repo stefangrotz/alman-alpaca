@@ -5,7 +5,7 @@ from tqdm import tqdm
 import time
 
 # Replace 'your_api_key' with your actual API key
-openai.api_key = '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'
+openai.api_key = 'key'
 
 def translate_text(value):
     response = openai.ChatCompletion.create(
