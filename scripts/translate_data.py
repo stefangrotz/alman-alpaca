@@ -2,9 +2,10 @@ import openai
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
+import time
 
 # Replace 'your_api_key' with your actual API key
-openai.api_key = 'YOUR_API_KEY_COMES_HERE'
+openai.api_key = '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'
 
 def translate_text(value):
     response = openai.ChatCompletion.create(
@@ -15,6 +16,7 @@ def translate_text(value):
             ],
         max_tokens=1024,
         temperature=0,
+        timeout=50,  # set a timeout in seconds
         )
     return response.choices[0]["message"]["content"].strip()
 
@@ -35,16 +37,33 @@ MAX_PARALLEL_REQUESTS = 100
 with open('alpaca_data.json', 'r') as f:
     data = json.load(f)
 
-start = 40000
-end = 55000
+start = 23
+end = 24
 translated_data = []
 data = data[start:end]
+
+def progress_report(completed, total, interval=1):
+    if completed % interval == 0 or completed == total:
+        percentage = (completed / total) * 100
+        print(f"Progress: {completed}/{total} ({percentage:.2f}%)")
+
 
 with ThreadPoolExecutor(max_workers=MAX_PARALLEL_REQUESTS) as executor:
     futures = {executor.submit(translate_item, item): item for item in data}
     
-    for future in tqdm(as_completed(futures), total=len(futures), desc="Translating"):
+    completed_tasks = 0
+    total_tasks = len(futures)
+    
+    for future in as_completed(futures):
+        completed_tasks += 1
+        progress_report(completed_tasks, total_tasks, interval=1)  # Adjust the interval as needed
         translated_data.append(future.result())
+
+# with ThreadPoolExecutor(max_workers=MAX_PARALLEL_REQUESTS) as executor:
+#     futures = {executor.submit(translate_item, item): item for item in data}
+    
+#     for future in tqdm(as_completed(futures), total=len(futures), desc="Translating"):
+#         translated_data.append(future.result())
 
 # Save the translated data to a new JSON file named 'translated_data.json'
 with open(f'translated_data_up_to_{start}_to_{end}.json', 'w') as f:
